@@ -1,0 +1,85 @@
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="kawa()">
+  
+    <form name = "form"><br>
+     <button type="button" name="xd" value="text" id = "xd1" >xd </button>
+   <button type="button" name="xd" value="text" id = "xd2">xd </button>
+      <button type="button" name="xd" value="text" id = "xd3">xd </button>
+	     <button type="button" name="xd" value="text" id = "xd4">xd </button>
+	   <button type="button" name="xd" value="text" id = "xd5">xd </button>
+<br>
+   <button type="button" name="xd" value="text" id = "xd6">xd </button>
+   <button type="button" name="xd" value="text" id = "xd7">xd </button>
+   <button type="button" name="xd" value="text" id = "xd8">xd </button>
+   <button type="button" name="xd" value="text" id = "xd9">xd </button>
+   <button type="button" name="xd" value="text" id = "xd10">xd </button>   
+<br>
+   <button type="button" name="xd" value="text" id = "xd11">xd </button>
+   <button type="button" name="xd" value="text" id = "xd12">xd </button>
+   <button type="button" name="xd" value="text" id = "xd13">xd </button>
+   <button type="button" name="xd" value="text" id = "xd14">xd </button>
+   <button type="button" name="xd" value="text" id = "xd15">xd </button>
+   <br>
+   <button type="button" name="xd" value="text" id = "xd16">xd </button>
+   <button type="button" name="xd" value="text" id = "xd17">xd </button>
+   <button type="button" name="xd" value="text" id = "xd18">xd </button>
+   <button type="button" name="xd" value="text" id = "xd19">xd </button>
+   <button type="button" name="xd" value="text" id = "xd20">xd </button>
+   <br>
+   <button type="button" name="xd" value="text" id = "xd21">xd </button>
+   <button type="button" name="xd" value="text" id = "xd22">xd </button>
+   <button type="button" name="xd" value="text" id = "xd23">xd </button>
+   <button type="button" name="xd" value="text" id = "xd24">xd </button>
+   <button type="button" name="xd" value="text" id = "xd25" >xd </button>   
+   <br>
+<button type="button" name="xd" value="text" onclick="kawa()">Losuj </button> 
+   <?php
+   echo "To jest test";
+   ?>
+   
+<script type="text/javascript">
+
+  function kawa()
+  {
+   const x = 25;
+   const tab = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","16","17","18","19","20","21","22","23","24","25"];
+	const tab1 = [x];
+	
+  for(i=1;i<26;i++)
+  {
+   const wynikLosowania = tab[Math.floor(Math.random() * tab.length)];
+ tab1[i-1] = wynikLosowania;
+  
+  for(g=0; g<i-1; g++)
+  {
+  if(tab1[g]==tab1[i-1])
+  {
+  const wynikLosowania1 = tab[Math.floor(Math.random() * tab.length)];
+   tab1[i-1] = wynikLosowania1;
+  g=0;
+  
+  
+  }
+  }
+
+   nazwa = "xd"+ i;
+  document.getElementById(nazwa).innerHTML = tab1[i-1];
+
+  }
+  }
+  
+  
+</script>
+
+
+
+
+    </form>
+
+  </body>
+</html>
